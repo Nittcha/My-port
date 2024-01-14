@@ -10,7 +10,7 @@ const intro = () => {
 
   const bgY = useTransform(scrollY, [0, 1000], [0, -500]);
   const moonX = useTransform(scrollY, [0, 1000], [0, -150]);
-  const mountainY = useTransform(scrollY, [0, 1000], [0, 0]);
+  const mountainY = useTransform(scrollY, [0, 1200], [-50, 0]);
   const roadY = useTransform(scrollY, [0, 1000], [0, 150]);
   const textY = useTransform(scrollY, [0, 1000], [0, 900]);
 
@@ -68,7 +68,7 @@ const intro = () => {
           className="absolute top-0 left-0 h-full w-full object-cover pointer-events-none"
         >
           <Image
-            src="/assets/road4.png"
+            src="/assets/road5.png"
             alt="Road"
             layout="fill"
             objectFit="cover"

@@ -10,3 +10,9 @@
     transform: rotate(360deg);
   }
 }
+
+@layer components {
+  .card {
+    @apply rounded-xl shadow-lg;
+  }
+}

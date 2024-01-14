@@ -12,7 +12,6 @@ export default function About() {
     <motion.section ref={ref} id="about">
       <main className="bg-[#1b4275] mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-center container">
-
           <div className="md:w-1/2 p-16">
             <Image
               src="/assets/breeze.jpg"
@@ -24,7 +23,9 @@ export default function About() {
             />
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-serif mb-4 text-yellow-50">About Me</h2>
+            <h2 className="text-5xl font-serif mb-4 text-yellow-50">
+              About Me
+            </h2>
             <p className="text-[#d1d9e3] mb-4">
               As a developer, I have always been passionate about creating
               elegant and effective solutions to complex problems. I have a

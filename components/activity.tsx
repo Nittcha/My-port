@@ -1,32 +1,60 @@
 "use client";
 
-import React from "react";
-import { useSectionInView } from "@/lib/hook";
+import { useRef } from "react";
+import { activityData } from "@/lib/data";
+import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function Activity() {
-    const { ref } = useSectionInView("Activity");
+type ProjectProps = (typeof activityData)[number];
 
-    return (
-        <div ref={ref} id="activity">
-            1. Conscientiousness.
-People who rank highest in conscientiousness are efficient, well-organized, dependable, and self-sufficient. They prefer to plan things in advance and aim for high achievement. People who rank lower in conscientiousness may view those with this personality trait as stubborn and obsessive.
+export default function activity({
+  title,
+  description,
+  imageUrl,
+}: ProjectProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
-Fun fact: Studies show marrying someone high in conscientiousness increases your chances of workplace success. A conscientious spouse can boost your productivity and help you achieve the most.
-
-2. Extroversion.
-People who rank high in extroversion gain energy from social activity. They're talkative and outgoing and they're comfortable in the spotlight. Others may view them as domineering and attention-seeking.
-
-Fun fact: Be on the lookout for a strong handshake. Studies show men with the strongest handgrips are most likely to rank high in extroversion and least likely to be neurotic. That doesn't hold true for women, however.
-
-3. Agreeableness.
-Those who rank high in agreeableness are trustworthy, kind, and affectionate toward others. They're known for their pro-social behavior and they're often committed to volunteer work and altruistic activities. Other people may view them as naïve and overly passive.
-
-Fun fact: Seek a financial investor who is high in agreeableness. Studies show agreeable investors are least likely to lose money from risky trading. Avoid an investor high in openness--that personality is associated with overconfidence that can lead an investor to take excessive risks.
-
-4. Openness to Experience.
-People who rate high in openness are known for their broad range of interests and vivid imaginations. They're curious and creative and they usually prefer variety over rigid routines. They're known for their pursuits of self-actualization through intense, euphoric experiences like meditative retreats or living abroad. Others may view them as unpredictable and unfocused.
-
-Fun fact: Openness is the only personality trait that consistently predicts political orientation. Studies show people high in openness are more likely to endorse liberalism and they're also more likely to express their political beliefs.
+  return (
+    <motion.div
+      ref={ref}
+      style={{
+        scale: scaleProgess,
+        opacity: opacityProgess,
+      }}
+      className="group mb-3 sm:mb-8 last:mb-0 flex justify-center items-center"
+    >
+      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+          <h3 className="text-2xl font-serif">{title}</h3>
+          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+            {description}
+          </p>
         </div>
-    );
+
+        <Image
+          src={imageUrl}
+          alt="Project I worked on"
+          quality={95}
+          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+          transition 
+          group-hover:scale-[1.04]
+          group-hover:-translate-x-3
+          group-hover:translate-y-3
+          group-hover:-rotate-2
+  
+          group-even:group-hover:translate-x-3
+          group-even:group-hover:translate-y-3
+          group-even:group-hover:rotate-2
+  
+          group-even:right-[initial] group-even:-left-40"
+        />
+      </section>
+    </motion.div>
+  );
 }
