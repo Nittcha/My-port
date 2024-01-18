@@ -12,6 +12,7 @@ export default function Activitys() {
   return (
     <section ref={ref} id="activity" className="scroll-mt-28 mb-28">
       <SectionHeading>My Activity</SectionHeading>
+      {/* ROUTE */}
       <div>
         {activityData.map((project, index) => (
           <React.Fragment key={index}>

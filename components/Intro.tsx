@@ -5,7 +5,8 @@ import Image from "next/image";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { useSectionInView } from "@/lib/hook";
 
-const intro = () => {
+const Intro = () => {
+  // HOOK
   const { scrollY } = useViewportScroll();
 
   const bgY = useTransform(scrollY, [0, 1000], [0, -500]);
@@ -19,7 +20,8 @@ const intro = () => {
   return (
     <div ref={ref} id="home" className=" scroll-mt-[100rem]">
       <section className="relative w-full h-screen overflow-hidden flex justify-center items-center">
-       
+        
+        {/* BACKGROUND */}
         <motion.div
           style={{ y: bgY }}
           className="absolute top-0 left-0 h-full w-full object-cover pointer-events-none"
@@ -32,6 +34,7 @@ const intro = () => {
           />
         </motion.div>
 
+        {/* MOON */}
         <motion.div
           style={{ x: moonX }}
           className="absolute top-0 left-0 h-full w-full object-cover pointer-events-none"
@@ -41,10 +44,10 @@ const intro = () => {
             alt="Moon"
             layout="fill"
             objectFit="cover"
-
           />
         </motion.div>
 
+        {/* MOUNTAIN */}
         <motion.div
           style={{ y: mountainY }}
           className="absolute top-0 left-0 h-full w-full object-cover pointer-events-none"
@@ -57,6 +60,7 @@ const intro = () => {
           />
         </motion.div>
 
+        {/* TEXT */}
         <motion.p
           style={{ y: textY }}
           className="relative text-white font-serif text-7xl md:text-8xl lg:text-9xl/10"
@@ -64,6 +68,7 @@ const intro = () => {
           My journey
         </motion.p>
 
+        {/* ROAD */}
         <motion.div
           style={{ y: roadY }}
           className="absolute top-0 left-0 h-full w-full object-cover pointer-events-none"
@@ -80,4 +85,4 @@ const intro = () => {
   );
 };
 
-export default intro;
+export default Intro;
