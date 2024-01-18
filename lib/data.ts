@@ -44,7 +44,7 @@ export const activityData = [
     imageUrl: nucleusImg,
   },
   {
-    title: "งานสัมนา",
+    title: "งานสัมมนา",
     description:
       "งานสัมนา การทำ startups จากบริษัทลงทุนในสิงคโปร์ (venture capital) ที่เริ่มจากงานวิจัยผลักดันให้ออกมาเป็นธุระกิจ",
     imageUrl: origginImg,
