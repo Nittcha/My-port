@@ -45,7 +45,7 @@ export default function Projects() {
             </div>
             <h5 className="text-2xl md:text-3xl font-serif mt-3">Renewable Energy Prices</h5>
             <p className="text-slate-500 text-lg mt-3">
-             ทำนายราคาพลังงานหมุนเวียนโดยใช้ model machine learning
+             ทำนายราคาพลังงานหมุนเวียนโดยใช้ machine learning model
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function Projects() {
             </div>
             <h5 className="text-2xl md:text-3xl font-serif mt-3">EFF Prediction</h5>
             <p className="text-slate-500 text-lg mt-3">
-             ตรวจวัดปริมาณน้ำตาลในอ้อย และ ประสิทธิภาพการทำงานของคนในโรงงาน โดยใช้ model machine learning
+             ตรวจวัดปริมาณน้ำตาลในอ้อย และ ประสิทธิภาพการทำงานของคนในโรงงาน โดยใช้ machine learning model
             </p>
           </div>
         </div>

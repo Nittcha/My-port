@@ -46,7 +46,7 @@ export const activityData = [
   {
     title: "งานสัมมนา",
     description:
-      "งานสัมนา การทำ startups จากบริษัทลงทุนในสิงคโปร์ (venture capital) ที่เริ่มจากงานวิจัยผลักดันให้ออกมาเป็นธุระกิจ",
+      "งานสัมมนา การทำ startups จากบริษัทลงทุนในสิงคโปร์ (Origgin) ที่เริ่มจากงานวิจัยผลักดันให้ออกมาเป็นธุระกิจ",
     imageUrl: origginImg,
   },
   {
