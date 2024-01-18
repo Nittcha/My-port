@@ -26,7 +26,7 @@ export default function Projects() {
                 height={300}
               />
             </div>
-            <h5 className="text-2xl md:text-3xl font-serif mt-3">PromptDov</h5>
+            <h5 className="text-2xl md:text-3xl font-serif mt-3">PromptGov</h5>
             <p className="text-slate-500 text-lg mt-3">
              website สร้างเอกสารทางการ ที่ช่วยคุณลดเวลาและความยุ่งยากในการเขียนเอกสารลง โดยใช้ AI generate ข้อความ
             </p>
