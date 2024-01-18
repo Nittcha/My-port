@@ -22,47 +22,43 @@ export const links = [
     name: "Projects",
     hash: "#projects",
   },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
 ] as const;
 
 export const activityData = [
   {
     title: "Majukcloud",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+      "ร่วมจัดงาน tech มีแนวคิดของ Cloud Native ที่สามารถไปประยุกต์ใช้กับอะไรก็ได้ เพราะ Cloud Native ไม่ใช่ แค่ Cloud แต่เป็นยุคสมัย สถานที่จัด Class Cafe สาขาวัดบูรฬ์ จังหวัดนครราชสีมา",
     imageUrl: majukImg,
   },
   {
     title: "The Tiger Team Acadamy Camp",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "จัด camp เกี่ยวกับ Climate change 7 วัน 6 คืน เพื่อปลุกพลัง 'Innopreneurship' ในตัวคุณ ผ่านการสร้างสรรค์นวัตกรรมที่ไม่เพียงแค่ท้าทายแต่ยังมีประโยชน์แก่สังคม",
     imageUrl: campImg,
   },
   {
     title: "TINT",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+      "สถานบันเทคโนโลยีนิวเคลียร์แห่งชาติ ดูเครื่อง tokamak ได้รับมอบจาก สถาบันพลาสมาฟิสิกส์ ประเทศจีน (ASIPP)",
     imageUrl: nucleusImg,
   },
   {
     title: "งานสัมนา",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+      "งานสัมนา การทำ startups จากบริษัทลงทุนในสิงคโปร์ (venture capital) ที่เริ่มจากงานวิจัยผลักดันให้ออกมาเป็นธุระกิจ",
     imageUrl: origginImg,
   },
   {
     title: "Robotphoenix",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+      "ร่วมพูดคุยกับ บริษัทหุ่นยนต์ในประเทศจีนที่มาเยี่ยมชมหุ่นยนต์ที่มหาวิทยาลัยเทคโนโลยีสุรนารี (SUT)",
     imageUrl: chinaImg,
   },
   {
     title: "Electron microscope",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+      "ร่วมพูดคุยกับ Dr. Chiou, Wen-An NanoCenter University of Maryland",
     imageUrl: microImg,
   },
 ] as const;

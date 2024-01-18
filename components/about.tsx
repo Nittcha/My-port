@@ -4,17 +4,25 @@ import { useSectionInView } from "@/lib/hook";
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function About() {
   const { ref } = useSectionInView("About");
+  const [name, setName] = useState("Nittcha Mongkolsaen");
+  const [age, setAge] = useState("17");
+  const [nationality, setNationality] = useState("Thai");
+  const [address, setAddress] = useState("thailand");
+  const [phone, setPhone] = useState("095 827 7038");
+  const [email, setEmail] = useState("nmongkolsaen@gmail.com");
 
   return (
     <motion.section ref={ref} id="about">
       <main className="bg-[#1b4275] mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-center container">
+          {/* IMAG */}
           <div className="md:w-1/2 p-16">
             <Image
-              src="/assets/breeze.jpg"
+              src="/assets/Breeze.jpg"
               alt="BR"
               quality={100}
               width={300}
@@ -22,27 +30,39 @@ export default function About() {
               className="rounded border-2 border-[#91becf]"
             />
           </div>
+
+          {/* INFRO */}
           <div className="md:w-1/2">
             <h2 className="text-5xl font-serif mb-4 text-yellow-50">
               About Me
             </h2>
-            <p className="text-[#d1d9e3] mb-4">
-              As a developer, I have always been passionate about creating
-              elegant and effective solutions to complex problems. I have a
-              strong foundation in software development, with a focus on web
-              technologies such as HTML, CSS, and JavaScript. I enjoy working on
-              both the front-end and back-end of applications, and I am always
-              looking for ways to optimize performance, improve user experience,
-              and ensure the highest level of code quality.
-            </p>
-            <p className="text-[#d1d9e3] mb-4">
-              Throughout my career, I have worked on a wide range of projects,
-              from simple static websites to complex enterprise-level
-              applications. I am experienced in working with a variety of
-              development tools and frameworks, including React, Angular,
-              Vue.js, Node.js, and Laravel. I am always eager to learn and
-              explore new technologies, and I am constantly seeking out
-              opportunities to improve my skills and knowledge.
+            <div className="text-[#d1d9e3] grid grid-cols-2 gap-4 container mx-auto p-4">
+              <p>
+                <strong>Name:</strong> {name}
+              </p>
+              <p>
+                <strong>Age:</strong> {age}
+              </p>
+              <p>
+                <strong>Nationality:</strong> {nationality}
+              </p>
+              <p>
+                <strong>Address:</strong> {address}
+              </p>
+              <p>
+                <strong>Phone:</strong> {phone}
+              </p>
+              <p>
+                <strong>Email:</strong> {email}
+              </p>
+            </div>
+            <p className="text-[#d1d9e3] mb-4 pb-8 pt-4">
+              ในยุคที่เทคโนโลยีก้าวหน้าอย่างไม่หยุดยั้งเพื่อแก้ปัญหาและพัฒนาโลกให้ไปไกลกว่าที่เป็นอยู่
+              ฉันมีความสนใจในสาขาของวิทยาศาสตร์ข้อมูลและปัญญาประดิษฐ์
+              (Artificial Intelligence, AI)
+              และได้มีโอกาสที่ศึกษาและทำงานในด้านนี้ ในอนาคตอันใกล้ฉันเชื่อว่า
+              AI จะเป็นหนึ่งในตัวปฏิวัติเทคโนโลยีที่สำคัญที่สุด
+              ที่จะนำพาการเปลี่ยนแปลงที่ยิ่งใหญ่และสร้างผลกระทบอย่างมากต่อวิถีชีวิตและการทำงานของเรา
             </p>
           </div>
         </div>

@@ -41,6 +41,7 @@ const intro = () => {
             alt="Moon"
             layout="fill"
             objectFit="cover"
+
           />
         </motion.div>
 
